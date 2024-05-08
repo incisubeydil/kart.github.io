@@ -1,0 +1,44 @@
+.container{
+ display: flex;/*esneklik*/
+ justify-content: center;
+ align-items: center;
+ width: 250px;/*genişlik*/
+ height: 200px;/*yükseklik*/
+ background-color: rgb(255, 237, 134);/*arka plan rengi*/
+ position: relative;
+ top: 50%;/*yukarıdan*/
+ left: 50%;/*soldan*/
+ transform: translate(-50%,100%);
+
+}
+.container .kart{
+    position: absolute;/*bir üstteki div sınırlarına ait*/
+    background-color: violet;/*arka plan rengi*/
+    width: 90%;/*genişlik*/
+    height: 90%;/*yükseklik*/
+    border-radius: 5px;/*kenar kıvırma*/
+    transform-style: preserve-3d; /*3 boyutlu donüş için*/
+    transition: all 0.3s ease-out;
+}
+.container .kart:hover{
+    transform: rotateY(180deg);
+}
+.container .kart .on{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: cornflowerblue;
+     backface-visibility: hidden;
+}
+.container .kart .arka{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: lightgreen;
+    backface-visibility: hidden; 
+    transform: rotateY(180deg);
+}
